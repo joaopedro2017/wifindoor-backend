@@ -1,9 +1,10 @@
+require("dotenv").config()
 const app = require('./express/express');
 const bodyParser = require('body-parser');
 const routerParking = require('./module/parking/router');
 const routerWifi = require('./module/wifi/router');
 const cors = require('cors');
-const port = process.env.port || 5000;
+const port = process.env.APP_URL || 3000;
 
 app.use(cors());
 app.use(bodyParser.json())
